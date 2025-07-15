@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Format</title>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+    }
+
+    .CONTT {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      background-color: #382a67;
+
+
+    }
+    #cont h2 {
+      text-align: center;
+    }
+
+    .back-button {
+      display: inline-block;
+      padding: auto;
+      margin-top: 10px;
+      text-align: left;
+      border: 1px solid rgb(90, 82, 82);
+      border-radius: 20px;
+      padding: 10px 30px;
+      background-color: rgba(61, 61, 61, 0.95);
+      width: auto;
+      color: white;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+ 
+    #last {
+
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: medium;
+      font-weight: 50;
+
+    }
+
+    #names {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 10px;
+      border: opx solid rgba(169, 143, 143, 0.922);
+
+    }
+
+    .Box2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      flex: 1;
+      max-height: 90%;
+      height: 100%;
+      
+      padding-top: 0px;
+    
+      
+    }
+
+    .span {
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+
+    }
+    #logos {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
+      background: transparent;
+
+    }
+    #details {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 20px;
+    }
+    .Terms {
+      width: 100%;
+      height: 100%;
+
+
+    }
+
+    #cont {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 5px;
+      width: 100%;
+      height: 100%;
+     gap: 18px !important;
+
+    }
+
+    #Boxx {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      max-height: 90%;
+      border-radius: 20px;
+      padding: 30px 10px;
+      height: 100%;
+      background-image: url("back.jpeg");
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      box-shadow: 00px 0px 2px rgba(0, 0, 0, 0.84);
+    }
+    .line-with-text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      width: 100%;
+      height: 100%;
+      min-width: 350px;
+      color: white;
+    }
+
+    .line-with-text::before,
+    .line-with-text::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid rgb(243, 239, 239);
+    }
+
+    h2 {
+      margin-bottom: 10px;
+      color: white;
+      font-weight: 400;
+      font-family: sans-serif;
+    }
+
+    h4 {
+      margin-right: 40px;
+      color: rgb(194, 189, 189);
+      font-weight: 400;
+    }
+
+    h5 {
+      color: rgb(39, 38, 38);
+    }
+
+    .indent {
+      display: inline-block;
+      margin-left: 20px;
+        display: inline-block;
+        margin-left: 30px;
+    }
+    .stand {
+      display: inline-block;
+      margin-left: 55px;
+
+    }
+
+    .type {
+      display: inline-block;
+      margin-left: 20px;
+
+    }
+
+    #btn {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(93, 93, 230, 0.475);
+      border-radius: 5px;
+      border: 0px solid violet;
+      font-weight: 900;
+      color: white;
+      letter-spacing: 1px;
+      font-size: 15px;
+      font-family: Inter;
+    }
+
+    
+
+    .inputgroups1 #details {
+      gap: 5px;
+    }
+
+    #Allinputs {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+
+    }
+
+    .inputgroup3 {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    a {
+      color: rgb(239, 233, 233);
+    }
+
+    .policy {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding-top: 10px;
+      color: rgb(115, 111, 111);
+      }
+
+    h1 {
+      color: rgb(237, 226, 226);
+      font-size: xx-large;
+      font-weight: 400;
+      font-family: sans-serif
+    }
+
+    h6 {
+      color: rgba(235, 235, 226, 0.84);
+    }
+
+    :root {}
+    #text1, #text2 {
+      background:transparent; 
+      border: 1px solid white;
+      border-radius: 3px;
+      font-size: smaller;
+      color: white;
+    }
+    #cont h2 {
+      font-size: 25px;
+      font-weight: 600;
+    }
+    #text2 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    
+
+    }
+    #cont {
+      gap: 10px;
+    }
+    #text1 {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+    .inputs {
+      padding: 18px;
+      background-color: #6c5e9b;
+      color: white;
+      border: none;
+      outline: none;
+      border-radius: 3px;
+      padding-left: 7px;
+      
+    }
+    .inputs:focus {
+      outline: 1px solid white;
+      
+    }
+    .inputs::placeholder {
+      color: rgb(167, 167, 164);
+    }
+    #cont h6 {
+      width: 250px;
+      text-align: center;
+    }
+
+    #emails, #pass {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     background-color: #6c5e9b;
+     padding-left: 5px;
+     border-radius: 5px;
+     
+    }
+    #emails  i, #pass i {
+      font-size: 25px;
+      color: rgb(161, 158, 158);
+      
+    }
+    #pass  {
+     padding-right: 10px;
+    }
+  .inputgroup6 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 20px;
+  }
+  #desk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: -5px;
+  }
+
+  </style>
+</head>
+
+<body>
+  <div class="CONTT">
+
+    <div id="Boxx">
+      <div id="cont">
+         <div id="desk">
+          <h2> Welcome to the Signup page</h2>
+          <h6> Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry's standard dummy text eversince the 1500s.</h6>
+          </div>
+            <button class="back-button"> &leftarrow; Back to website </button>
+
+      </div>
+      <div id="last">
+        <h4> Every Step Through The Dark, <br><span class="indent"> A New Adventure Sparks ,</span> </h4>
+
+      </div>
+    </div>
+
+    <div class="Box2">
+
+      <div class="inputgroups1">
+        <div id="details">
+          <h1> Create An Account </h1>
+          <h6> Already have an account? <a href=""> Login</a></h6>
+        </div>
+      </div>
+      <div id="Allinputs">
+        
+          <div id="names">
+            <input type="text" placeholder="first name" class="span inputs">
+            <input type="text" placeholder="last name" class="span  inputs">
+          </div>
+        
+        <div class="inputgroup3">
+          <div id="emails"><i class="ph-fill ph-envelope-simple"></i>
+          <input type="text"  placeholder="Email" class="span inputs">
+          </div>
+          <div id="pass"><i class="ph-fill ph-lock"></i>
+          <input type="password" placeholder="password" class="span inputs">
+          <i class="ph-fill ph-eye-slash"></i>
+         </div>
+        </div>
+        <div class="inputgroup4">
+          <div class="Terms">
+            <button id="btn" class="span"> Sign Up </button>
+            <h5><span class="policy"> By logging in, you agree to our <a href=""> Terms of service </a> and <a href="">
+                  Privacy Policy.</a> </span></h5>
+          </div>
+        </div>
+        
+        
+        <div class="inputgroup6">
+                    <div class="line-with-text">
+            <span> Or Register With </span>
+          </div>
+          <div id="logos">
+            <button id="text1" class="span"> <img src="GOOGLE.png" alt="" width="30px"> Google </button>
+            <button id="text2" class="span"> <img src="x.png" alt="" width="50px"> Twitter</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

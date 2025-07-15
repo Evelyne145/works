@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> another login</title>
+        <style>
+            * {
+                margin: 0px;
+                padding: opx;
+                box-sizing: border-box;
+            }
+            :root {
+                blue-ribbon: #0c6bfb;
+--mystic: #e0e9ee;
+--valencia: #d73344;
+--bright-turquoise: #13caf0;
+--heavy-metal: #262b28;
+--danube: #6e97cf;
+--matisse: #1476a0;
+--java: #21acc9;
+--denim: #135ce5;
+--torea-bay: #103480;
+            }
+            .WHOLE {
+                width: 100%;
+                height: 100%;
+                position: fixed;
+                background-color:  #3a6bd4;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            #BOX {
+                
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 20px;
+                gap: 20px;
+                border-radius: 10px;
+                padding: 10px;
+                background-color: white;
+                
+                margin: 70px;
+                
+                height: 100%;
+                
+            }
+            #first {
+                position: relative;
+                font-size: large;
+                border: none;
+                padding-left: 0px;
+                font-weight: 600;
+                
+            }
+            #second {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                font-size: 100;
+                border: none;
+
+                 }    
+            .span {
+                 width: 290px;
+                 height: 30px;
+                 padding: 7px;
+                 margin: 5px;
+                 border: none;
+                }
+                .third {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    align-items: center;
+                    width: 250px;
+                    border: none;
+                }
+                 #fifth {
+                    margin-left: 90px;
+                    font-size: smaller;
+
+                 }
+                 #all {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                 }
+                 #btn {
+                    height: 35px;
+                    border: 0px solid blue;
+                    background-color: #0c6bfb;
+                    color: white;
+                    border-radius: 5px;
+                    border: none;
+                 }
+                 .spans {
+                    width:290px;
+                 }
+                 #all{
+                    gap: 5px;
+                    margin-bottom: 10px;
+                 }
+                 #aa {
+                    border:1px solid rgba(143, 141, 141, 0.774);
+                    border-radius: 5px;
+                    color: rgb(245, 237, 237);
+                    background-color: #d73344;
+                    
+                 }
+                 
+                #bb {
+                    border: 1px solid rgb(193, 156, 156);
+                    border-radius: 5px;
+                    background-color: #1658e8;
+                    color: #e0e9ee;
+                }
+                #cc {
+                    border: 1px solid rgb(199, 164, 164);
+                    background-color: #13caf0;
+                    border-radius: 5px;
+                    color: #000001;
+                }
+                .spane {
+                    width: 290px ;
+                    font-weight: 800;
+                    font-size: smaller;
+                    border: none;
+                }
+                
+                
+                </style>
+                
+    </head>
+    <body>
+        <div class="WHOLE">
+            <div id="BOX">
+                <div id="first" class="span">Log in</div>
+            <div id="second">
+                <input type="text" placeholder="Email" class="spane">
+                <input type="password" placeholder="Password" class="spane">
+                </div>
+                <div class="but">
+                <div class="third" style="margin-bottom: 1px;"><input type="checkbox" id="remember" ><label for="remember" class="span"> Keep me logged in </label>
+                    </div>
+                    <button id="btn" class="spans"> Log in now</button>
+                  </div>
+                
+                <div id="fifth">
+                    <a href="" class="span"> create new account</a>
+                    <a href="" class="span"> Forgot password</a>
+                </div>
+                
+             <div id="sixth" style="margin-top: 2px;" class="span"><h6> Or Continue with</h6></div>
+             <div id="all">
+                <button id="aa"  class="span">SIGN IN WITH GOOGLE</button>
+                <button id="bb" class="span"> SIGN IN WITH FACEBOOK</button>
+                <button id="cc" class="span"> SIGN IN WITH TWITTER</button>
+                </div>
+                
+                
+             </div>
+            
+            </div>
+        </div>
+    </body>
+</html>
