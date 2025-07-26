@@ -1,16 +1,42 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html>
     <head>
         <title> DETAILS</title>
         <script src="https://unpkg.com/phosphor-icons"></script>
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Inter';
+            }
             /* element stacking */
             .whole {
+                position: fixed;
                 width: 100%;
                 height: 100%;
-                background-color: white;
+                /* background-color: white; */
                 display: flex;
                 flex-direction: column;
+            }
+            .stars{
+                display: flex;
+                flex-direction: row;
+                gap: 1px;
+            }
+            .stars i{
+                margin: 0px;
+                font-size: 8px;
+                background-image: url("star.svg");
+                color: var(--flame-pea) !important;
+            }
+            .greeting{
+                padding: 4px 15px;
+                position: relative;
+                border-radius: 15px;
+                background-color: white;
+                border: 1px solid gray ;
             }
            .links{
             display: flex;
@@ -18,14 +44,20 @@
             justify-content: space-around;
             align-items: center;
             width: 100%;
+            max-width: 900px;
             background-color: black;
             text-align: center;
             color: white;
-            height: 40px;
+            font-size: 19px;
             list-style: none;
-            padding: 0px;
+            padding: 10px 0px;
             margin: 0px;
-            border-radius: 20px;
+            border-radius: 25px;
+           }
+           .actions-wrapper{
+            width: 100%;
+            display: flex;
+            justify-content: center;
            }
            a {
             color: white;
@@ -37,55 +69,55 @@
             display: flex;
             flex-direction: row;
             justify-content: center;
+            margin: 2px 20px;
             align-items: center;
             
            }
-           .first {
+           .header {
             padding: 5px;
+            display: flex;
+            justify-content: center;
             
            }
-           .second {
+           .intro {
             width: 100%;
-            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: opx;
-            margin-top: 20px;
-           }
-           #par {
-            border: 1px solid rgb(54, 54, 54);
-            border-radius: 9px;
-            width: 60px;
-            height: 20px;
-            
-           }
-           .fourth {
-            width: 100%;
-            height: 20px;
-            display: flex;
-            justify-content: flex-end;
-            flex-direction: column;
-            align-items: flex-end;
+            font-size: 37px;
             gap: 0px;
-            padding: 15px;
-
+            margin-top: 20px;
+            text-align: center;
            }
-           .fifth {
-            width: 200px;
-            height: 2px;
-            padding: 20px;
+          /* .greeting::after{
+            
+            content: "";
+            background-image: url("after.png");
+            border: 1px solid black;
+            background-size: cover;
+            height: 20px;
+          } */
+           .actions {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            gap: 1px;
+            width: max-content;
+            backdrop-filter: blur(3px);
+            padding: 6px;
+            
+            gap: 8px;
+            z-index: 10;
             border: 1px solid rgb(173, 173, 173);
             border-radius: 40px;
-            background-color: #3f3f3f;;
-            box-shadow: 1px 0px rgb(47, 47, 46)
+            background-color: #ffffff56;
             
+           }
+           .actions button{
+            display: flex;
+            align-items: center;
+            font-size: 17px;
            }
            :root {
             --roman-coffee: #7b664c;
@@ -103,23 +135,16 @@
             display: flex;
             border: 1px solid rgb(51, 50, 50);
             border-radius: 20px;
-            height: 30px;
-            width: 120px;
+            padding: 5px 10px;
             flex-direction: column;
+            font-weight: 500;
+            color: white;
             justify-content: center;
             align-items: center;
             background-color: #eb8c51
 
            }
-           #portfoii {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding-right: 30px;
-           }
-           .second h2 {
-            font-size: xx-large;
+           .intro h2 {
             left: 30px;
             font-weight: 700;
            }
@@ -130,6 +155,9 @@
             margin: 0px;
             background-color: #a3511e;
            }
+           .third{
+            font-size: 18px;
+           }
            #menu{
             position: fixed;
             right: 20px;
@@ -137,13 +165,58 @@
             display: none;
             font-size: 20px;
            }
+           .contents{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            flex: 1;
 
+           }
+           #next{
+            background: transparent;
+            color: white;
+            border: none;
+            margin-right: 5px;
+           }
+           .horizontal-flex{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 35px;
+           }
+           .fourth{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 5px;
+           }
            /* pseudo-classes hover, focus, first-child, last-child, nth-of-type*/
+
+           .flex-row{
+            display: flex;
+            flex-direction: row;
+           }
+           .flex-col{
+            display: flex;
+            flex-direction: column;
+           }
 
            #menu:hover{
             font-size: 40px;
             background-color: #95230d;
             color: white;
+           }
+
+           .image-area{
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+            /* background-color: #c9b1a5; */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            
            }
 
            #menu:hover links{
@@ -174,11 +247,41 @@
             font-size: x-large;
             font-weight: 900;
            }
-           /* #name {
+           #name {
               display: inline;
-              color: ;
-              background-color: teal;
-           } */
+              color: var(--flame-pea);
+           }
+           #women{
+            position: relative;
+            top: 60px;
+           }
+           .leaf{
+            position: absolute;
+            right: -15px;
+            top: -25px;
+            transform: rotate(90deg);
+           }
+           .myname{
+            position: relative;
+           }
+           .left-leaf{
+            left: -35px;
+            position: absolute;
+            bottom: -25px;
+            transform: rotate(-70deg);
+
+           }
+           .logo-area{
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            margin-right: 5px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+           }
            </style>
            </head>
             <body>
@@ -186,50 +289,60 @@
                 <i class="ph ph-list"></i>
             </div>
             <div class="whole">
-                <div class="first">
+                <div class="header">
                     <nav class="links">
                          <li><a href=""> Home</a></li>
                          <li><a href=""> About</a></li>
                           <li><a href=""> Service</a></li>
-                          
-                           <li><a href="" class="jcrea-link"><img src="jc.jpg" alt="" width="35px" class="together" > <span>JCREA</span></a></li>
-                           
+                           <li><a href="" class="jcrea-link"> 
+                            <div class="logo-area"><img src="logo.webp" alt="" width="40px" class="together" ></div> <span>JCREA</span></a></li>
                             <li><a href=""> Resume</a></li>
                              <li><a href=""> Project</a></li>
                               <li><a href=""> Contact</a></li>
                               </nav>
                 </div>
-                    <div class="second">
-                        <div id="up">
-                            <img src="after.png" width="20px">
-                        <button id="par" class="span"> <span> Hello!</span></button>
-                        </div>
-                        <h2> I'm <span id="name"> <i>Jenny</i> </span>, <br> Product Designer</h2>
+                <div class="contents">
+                     <div class="intro">
+                   
+                    <button id="par" class="greeting">  Hello! 
+                        <div class="leaf">
+                        <img src="after.png" width="30px" alt="">
+                    </div> </button>
+                   
+                    <div class="myname">
+                        <h2> I'm <span id="name"> Jenny </span>, <br> Product Designer</h2>
+                        <div class="left-leaf">
+                                 <img src="after.png" width="60px" height="40px"  alt="">
+                             </div>
                     </div>
+                </div>
+                <div class="horizontal-flex">
                     <div class="third">
-                        <h6> Jenny's Exceptional product design <br> ensure our website's success.<br> Highly Recommended </h6>
+                       <i class="ph-fill ph-quotes"></i> <br>
+                     Jenny's Exceptional product design <br> ensure our website's success.<br> Highly Recommended
+                </div>
+                <div class="fourth">
+                    <div id="stars"> 
+                    <img src="star.svg" width="15px" alt="">
+                    <img src="star.svg" width="15px" alt="">
+                    <img src="star.svg" width="15px" alt="">
+                    <img src="star.svg" width="15px" alt="">
+                    <img src="star.svg" width="15px" alt="">
                     </div>
-                    <div class="fourth">
-                        <div id="stars"> 
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        <i class="ph-fill ph-star"></i>
-                        </div>
-
-                        <h3> 10 Years </h3>
-                        <p> Experience</p>
-                    </div>
-                    <div class="fifth">
-                        <div id="portfoii">
-                            <button id="port"> Portfolio &UpperRightArrow;</button>
-                            </div>
-                            <div id="next">
-                            <p> Hire me </p>
-                        </div>
-                    </div>
+                    <h1> 10 Years </h1>
+                    <p> Experience</p>
+                </div>
+                </div>
+                <div class="actions-wrapper">
+                    <div class="actions">
+                        <button id="port"> Portfolio &UpperRightArrow;</button>
+                        <button id="next"> Hire me </button>
+                </div>
+                </div>
+                <div class="image-area">
+                    <img src="women.png" id="women" width="430px" alt="">
+                </div>
+                </div>
                 </div>
         </body>
 </html>
