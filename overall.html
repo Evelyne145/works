@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> PAGE </title>
+  <script src="https://unpkg.com/phosphor-icons"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Inter';
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    :root {
+      --mirage: #1c2b31;
+      --mystic: #e7ecef;
+      --puerto-rico: #42bfae;
+      --pewter: #92a69e;
+      --cape-palliser: #a47940;
+      --polar: #ecf5fb;
+      --calico: #e0b195;
+      --cameo: #deb7ab;
+      --potters-clay: #805c34;
+      --quicksand: #b89587;
+    }
+
+    .container {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      padding: 10px;
+      background-color: #ecf5fb;
+    }
+
+    .heropage {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+      overflow-y: auto;
+      width: 100%;
+      height: 100%;
+    }
+
+    .stories {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+    }
+
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 10px;
+      border-radius: 10px;
+      width: clamp(150px, 20%, 300px);
+      font-size: 16px;
+      background-color: white;
+    }
+
+    #src {}
+
+    .blueprint {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding: 20px;
+      gap: 30px;
+      overflow-y: auto;
+      height: 100%;
+      width: 100%;
+    }
+
+    .items {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      border-radius: 10px;
+      padding: 0px;
+    }
+
+    .img-wrapper {
+      overflow: hidden;
+      width: 35px;
+      border: 1px;
+      height: 35px;
+      position: relative;
+      border-radius: 50%;
+    }
+
+    /*.img-wrapper::after{
+                  content: "Eve";
+                  background-color: green;
+              }*/
+    .eve {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .nums-label {
+      color: gray;
+      font-size: 13px;
+    }
+
+    .badge {
+      position: absolute;
+      top: -2px;
+      z-index: 1000;
+      right: -5px;
+      background-color: rgba(0, 255, 115, 1);
+      width: 12px;
+      border-radius: 50%;
+      height: 12px;
+      border: 1.5px solid white;
+    }
+
+    .larger-wrapper {
+      position: relative;
+      width: max-content;
+    }
+
+    .name {
+      display: flex;
+      gap: 5px;
+      font-size: 1rem;
+      align-items: center;
+    }
+
+    .plat {
+      display: flex;
+      justify-content: space-between;
+      border: 1px solid white;
+      border-radius: 10px;
+      background-color: white;
+      align-items: center;
+      padding: 15px;
+    }
+
+    .img2-wrapper {
+      height: 200px;
+      background-color: teal;
+      width: 100%;
+      background-image: url('profilebg.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .num {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      align-items: center;
+    }
+
+    .num i {
+      color: gray;
+    }
+
+    .numbers {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      gap: 20px;
+    }
+
+    .all {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 10px;
+      overflow: hidden;
+      justify-content: space-between;
+      box-shadow: 1px 1px 10px rgba(163, 215, 220, 0.525);
+    }
+
+    .insta {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 40px;
+      border-radius: 10px;
+      border-top-right-radius: 0px;
+      border-top-left-radius: 0px;
+      background-color: rgba(225, 243, 255, 1);
+    }
+
+    .fine {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .bal {
+      display: flex;
+
+    }
+
+    .nb {
+      display: flex;
+      background-color: rgb(137, 137, 137);
+      font-size: smaller;
+      border-radius: 50%;
+      width: 15px;
+      color: white;
+      margin: 3px;
+      margin-top: 0px;
+      pos
+      align-items: center;
+      justify-content: center;
+      height: 15px;
+    }
+
+    .try {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      height: max-content;
+      padding: 5px;
+      border-radius: 20px;
+      border: 1px solid black;
+    }
+
+    .try input {
+      border: none;
+      padding: 3px;
+      outline: none;
+    }
+
+    .ico {
+      display: flex;
+      gap: 10px;
+    }
+
+    .jap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    @media(max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+    }
+
+    .ph {
+      font-size: 17px;
+    }
+
+    .cup {
+      display: flex;
+      padding:10px 20px;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .details {
+
+      font-size: 13px;
+    }
+
+    .drop{
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    .drop i{
+      font-size: 13px;
+    }
+
+    .details span {
+      color: rgba(138, 138, 138, 1);
+
+    }
+
+    .detail {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      flex: 1;
+      height: 110%;
+      position: relative;
+      top: -70px;
+    }
+
+    .detail label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+    }
+
+    .jj {
+      font-weight: 700;
+      color: rgb(32, 31, 31);
+    }
+
+    #plate {
+      background-color: blue;
+      border: none;
+      color: white;
+      padding: 7px 13px;
+      border-radius: 20px;
+    }
+
+    .larger-one {
+      width: 70px;
+      height: 70px;
+    }
+
+    .icns {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      padding-right: 10px;
+    }
+
+    .icns i {
+      color: white;
+      padding: 3px;
+
+    }
+
+    #face {
+      display: flex;
+      border-radius: 100%;
+      background-color: rgb(0, 94, 255);
+    }
+
+    #twit {
+      display: flex;
+      border-radius: 50%;
+      background-color: #42bfae;
+    }
+
+    #ball {
+      display: flex;
+      border-radius: 50%;
+      background-color: rgb(107, 118, 127);
+    }
+
+    #yout {
+      display: flex;
+      border-radius: 50%;
+      background-color: rgb(252, 132, 106);
+    }
+
+    .gallery-selector{
+      color: blue;
+      border-bottom: 2px solid blue;
+    }
+
+    .prfl {
+      display: flex;
+      gap: 5px;
+      padding: 10px;
+    }
+
+    .ho {
+      display: flex;
+      color: gray;
+      font-size: smaller;
+      
+    }
+
+    #us h3 {
+      display: flex;
+      font-weight: 700;
+      font-size: small;
+    }
+
+    .serch {
+      display: flex;
+      border: 1px solid rgb(120, 119, 119);
+      justify-content: center;
+      padding: 4px;
+      align-items: center;
+      gap: 10px;
+      border-radius: 6px;
+    }
+
+    .searchh {
+      display: flex;
+      border: none;
+    }
+
+    .serch i {
+      display: flex;
+      font-weight: 800;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="heropage">
+      <div class="sidebar">
+        <div id="first">
+          <h3> Spike Admin </h1>
+        </div>
+        <div class="items">
+          <h5>HOME</h5>
+          <span class="same"> Dashboard</span>
+          <span class="same"> Dashboard 2</span>
+          <h5> APPS</h5>
+          <span class="same"> Ecommerce</span>
+          <div id="users">
+            <span class="same"> User Profile</span>
+          </div>
+          <span class="same"> Blog</span>
+          <span class="same"> Email</span>
+          <span class="same"> Calendar</span>
+          <span class="same"> Kanban</span>
+          <span class="same"> Chat</span>
+          <span class="same"> Notes</span>
+          <span class="same"> Contact Table</span>
+          <span class="same"> Contact List</span>
+          <span class="same">Invoice</span>
+          <h5>PAGES</h5>
+          <span class="same">Pricing</span>
+        </div>
+      </div>
+      <div class="blueprint">
+        <div class="top">
+          <div class="jap">
+            <i class="ph ph-list"></i>
+            <span class="drop">Apps <i class="ph ph-caret-down"></i> </span>
+            <span class="drop">Chat</span>
+            <span class="drop">Calendar</span>
+            <span class="drop">Email</span>
+          </div>
+          <div class="eve">
+            <span class="try"><i class="ph ph-magnifying-glass"></i><input type="text"
+                placeholder='Try to be searching...' /></span>
+            <div class="ico"><i class="ph ph-moon"></i><i class="ph ph-chat-centered-dots"></i><i
+                class="ph ph-bell"></i></div>
+            <div class="name">
+              <div class="larger-wrapper">
+                <div class="img-wrapper">
+                  <img src='person.jpg' width="40px" height="auto">
+                </div>
+                <div class="badge"></div>
+              </div>
+              <div class="details">
+                <h4>
+                  <class="name"> Mike Nielsen
+                </h4>
+                <span> Admin </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="plat">
+          <div id="us">
+            <h3> User Profile</h2>
+          </div>
+          <div class="ho">
+            <span> Home </span>
+            <span>.</span>
+            <span>User profile</span>
+          </div>
+        </div>
+        <div class="all">
+          <div class="img2-wrapper"></div>
+          <div class="cup">
+            <div class="numbers">
+              <div class="num">
+                <i class="ph ph-file-text"></i>
+                <span class="jj">938</span>
+                <span class="nums-label">Posts</span>
+              </div>
+              <div class="num">
+                <i class="ph ph-user-circle"></i>
+                <span class="jj">3,586</span>
+                <span class="nums-label">Followers</span>
+              </div>
+              <div class="num">
+                <i class="ph ph-check"></i>
+                <span class="jj">2,659</span>
+                <span class="nums-label">Following</span>
+              </div>
+            </div>
+            <div class="detail">
+              <div class="larger-wrapper ">
+                <div class="img-wrapper larger-one"><img src='person.jpg' width="50px" height="auto"> </div>
+
+              </div>
+              <label>
+                <h5>Mike Nielsen</h5>
+                <span>Designer</span>
+              </label>
+            </div>
+            <div class="stories">
+              <div class="icns">
+                <i class="ph ph-facebook-logo" id="face"></i>
+                <i class="ph ph-twitter-logo" id="twit"></i>
+                <i class="ph ph-dribbble-logo" id="ball"></i><i class="ph ph-youtube-logo" id="yout"></i>
+              </div> <button id="plate"> Add to Story </button>
+            </div>
+          </div>
+          <div class="insta">
+            <span class="prfl"> <i class="ph ph-user-circle"></i> Profile</span>
+            <span class="prfl"> <i class="ph ph-heart"></i>Followers</span>
+            <span class="prfl"> <i class="ph ph-user-circle"></i> Friends</span>
+            <span class="prfl gallery-selector"> <i class="ph ph-image"></i> Gallery</span>
+          </div>
+          </div>
+        <div class="fine">
+          <div class="bal">
+            <h4>Gallery</h4>
+            <span class="nb">12</span>
+          </div>
+          <span class="serch"> <i class="ph ph-magnifying-glass" id="src"></i> <input type="text"
+              placeholder="Search Followers" class="searchh"></span>
+        </div>
+      </div>
+    </div>
+</body>
+
+</html>
