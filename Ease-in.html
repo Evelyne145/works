@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .moving-block{
+      display: absolute;
+      width: 100%;
+      top: 0px;
+      border: 1px solid black;
+      height: 50px;
+      
+    }
+    .moving-block:hover .inner-block{
+      right: 0px;
+    }
+    .inner-block{
+      width: 10%;
+      border-radius: 10px;
+      background-color: blue;
+      height: 50px;
+      right: 90%;
+      position: absolute;
+      transition: all 2s ease-in;
+    }</style>
+</head>
+<body>
+    <div class="moving-block">
+  <div class="inner-block">
+  </div>
+</div>
+</body>
+</html>

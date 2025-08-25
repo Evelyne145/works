@@ -61,10 +61,12 @@
       justify-content: flex-start;
       align-items: flex-start;
       padding: 10px;
+      padding-right: 0px;
       border-radius: 10px;
       width: clamp(150px, 20%, 300px);
       font-size: 16px;
       background-color: white;
+      gap: 40px;
     }
 
     #src {}
@@ -85,7 +87,6 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      gap: 15px;
     }
 
     .top {
@@ -226,7 +227,6 @@
       color: white;
       margin: 3px;
       margin-top: 0px;
-      pos
       align-items: center;
       justify-content: center;
       height: 15px;
@@ -419,6 +419,26 @@
       display: flex;
       font-weight: 800;
     }
+    .same:hover{
+      background-color: blue;
+      color: white;
+      padding-left: 7px;
+    }
+    .same  {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      cursor: pointer;
+      /*background-color: magenta;*/
+      justify-content: -flex-start;
+      align-items: center;
+      padding: 10px 3px;
+      gap: 10px;
+      font-weight: 600;
+      font-size: 13px;
+      transition: all .2s ease-in-out;
+    }
+ 
   </style>
 </head>
 
@@ -431,24 +451,24 @@
         </div>
         <div class="items">
           <h5>HOME</h5>
-          <span class="same"> Dashboard</span>
-          <span class="same"> Dashboard 2</span>
+          <span class="same"><i class="ph ph-airplay"></i> Dashboard</span>
+          <span class="same"> <i class="ph ph-chart-bar"></i>Dashboard 2</span>
           <h5> APPS</h5>
-          <span class="same"> Ecommerce</span>
-          <div id="users">
-            <span class="same"> User Profile</span>
+          <span class="same"> <i class="ph-fill ph-shopping-cart"></i> Ecommerce <i class="ph ph-caret-right"></i></span>
+          <div id="users-same">
+            <span class="same"><i class="ph ph-user-circle"></i> User Profile <i class="ph ph-caret-down"></i> </span>
           </div>
-          <span class="same"> Blog</span>
-          <span class="same"> Email</span>
-          <span class="same"> Calendar</span>
-          <span class="same"> Kanban</span>
-          <span class="same"> Chat</span>
-          <span class="same"> Notes</span>
-          <span class="same"> Contact Table</span>
-          <span class="same"> Contact List</span>
-          <span class="same">Invoice</span>
+          <div class="same"><i class="ph ph-chart-pie-slice"></i> Blog <i class="ph ph-caret-right"></i></div>
+          <span class="same"> <i class="ph-fill ph-envelope-simple-open"></i> Email</span>
+          <span class="same"> <i class="ph-fill ph-calendar"></i> Calendar</span>
+          <span class="same"> <i class="ph-fill ph-kanban"></i> Kanban</span>
+          <span class="same"> <i class="ph-fill ph-chat-circle"></i> Chat</span>
+          <span class="same"> <i class="ph ph-note"></i> Notes</span>
+          <span class="same"> <i class="ph-fill ph-address-book"></i> Contact Table</span>
+          <span class="same"> <i class="ph-fill ph-list"></i> Contact List</span>
+          <span class="same"> <i class="ph ph-note-blank"></i>Invoice</span>
           <h5>PAGES</h5>
-          <span class="same">Pricing</span>
+          <span class="same"> <i class="ph-fill ph-currency-rub"></i> Pricing</span>
         </div>
       </div>
       <div class="blueprint">
