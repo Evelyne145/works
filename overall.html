@@ -43,7 +43,6 @@
       display: flex;
       flex-direction: row;
       gap: 15px;
-      overflow-y: auto;
       width: 100%;
       height: 100%;
     }
@@ -67,6 +66,11 @@
       font-size: 16px;
       background-color: white;
       gap: 40px;
+     
+    }
+    
+    .sidebar::-webkit-scrollbar{
+      display: none;
     }
 
     #src {}
@@ -86,7 +90,10 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      align-items: flex-start;
+      align-items: flex-start; 
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: none;
     }
 
     .top {
@@ -96,7 +103,7 @@
       align-items: center;
       background-color: white;
       border-radius: 10px;
-      padding: 0px;
+      padding: 5px;
     }
 
     .img-wrapper {
@@ -210,6 +217,13 @@
 
     .fine {
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .upper-bal{
+      display: flex;
+      padding: 10px;
       justify-content: space-between;
     }
 
@@ -351,7 +365,11 @@
       padding: 3px;
 
     }
-
+   .cover-part {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
     #face {
       display: flex;
       border-radius: 100%;
@@ -402,12 +420,18 @@
 
     .serch {
       display: flex;
-      border: 1px solid rgb(120, 119, 119);
+      border: 1px solid #cbd8de;
       justify-content: center;
       padding: 4px;
       align-items: center;
       gap: 10px;
       border-radius: 6px;
+    
+    }
+
+    .serch input{
+      background: transparent;
+      outline: none;
     }
 
     .searchh {
@@ -430,23 +454,88 @@
       flex-direction: row;
       cursor: pointer;
       /*background-color: magenta;*/
-      justify-content: -flex-start;
+      justify-content: flex-start;
       align-items: center;
       padding: 10px 3px;
       gap: 10px;
       font-weight: 600;
+      border-radius: 5px;
       font-size: 13px;
       transition: all .2s ease-in-out;
+      color: rgb(31, 31, 31);
+      margin-left: 10px;
     }
- 
+    .profilen  {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      cursor: pointer;
+      /*background-color: magenta;*/
+      justify-content: flex-start;
+      align-items: center;
+      padding: 10px 3px;
+      gap: 10px;
+      font-weight: 600;
+      border-radius: 5px;
+      font-size: 13px;
+      transition: all .2s ease-in-out;
+      color: rgb(31, 31, 31);
+      margin-left: 40px;
+    }
+   
+    .user-profile-list{
+      display: none;
+      flex-direction: column;
+      gap: 3px;
+    }
+    #up:hover .user-profile-list{
+      display: flex;
+      
+    }
+    #up:hover .same{
+      color: #fcad99 !important;
+      background-color: #fff0ecff !important;
+    }
+    .users-same{
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .card-img{
+      width: 200px;
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .gallery-area{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 10px;
+    }
+    .card-img img{
+      width: 110%;
+    }
+ .items h5 {
+  font-size: 10px;
+  font-weight: 700;
+  margin: 10px 0px;
+   }
+   #first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+   }
   </style>
 </head>
-
 <body>
   <div class="container">
     <div class="heropage">
       <div class="sidebar">
-        <div id="first">
+        <div id="first"> 
+          <div class="img"><img src="spike.jpg" alt="" width="40px"></div>
           <h3> Spike Admin </h1>
         </div>
         <div class="items">
@@ -456,7 +545,13 @@
           <h5> APPS</h5>
           <span class="same"> <i class="ph-fill ph-shopping-cart"></i> Ecommerce <i class="ph ph-caret-right"></i></span>
           <div id="users-same">
-            <span class="same"><i class="ph ph-user-circle"></i> User Profile <i class="ph ph-caret-down"></i> </span>
+            <span class="users-same" id="up">
+            <label class="same"><i class="ph ph-user-circle"></i> User Profile <i class="ph ph-caret-down"></i> </label>
+            <div class="user-profile-list">
+            <li class="profilen">◦ Profile 1</li>
+            <li class="profilen">◦ Profile 2</li>
+            </div>
+            </span>
           </div>
           <div class="same"><i class="ph ph-chart-pie-slice"></i> Blog <i class="ph ph-caret-right"></i></div>
           <span class="same"> <i class="ph-fill ph-envelope-simple-open"></i> Email</span>
@@ -472,6 +567,7 @@
         </div>
       </div>
       <div class="blueprint">
+        <div class="cover-part">
         <div class="top">
           <div class="jap">
             <i class="ph ph-list"></i>
@@ -556,13 +652,47 @@
             <span class="prfl gallery-selector"> <i class="ph ph-image"></i> Gallery</span>
           </div>
           </div>
+        
+        </div>
+       
         <div class="fine">
-          <div class="bal">
+          <div class="upper-bal">
+            <div class="bal">
             <h4>Gallery</h4>
             <span class="nb">12</span>
           </div>
           <span class="serch"> <i class="ph ph-magnifying-glass" id="src"></i> <input type="text"
               placeholder="Search Followers" class="searchh"></span>
+          </div>
+          <div class="gallery-area">
+            <div class="card">
+              <div class="card-img">
+             <img src="gall1.jpg" alt="" id="rotate" >
+              </div>
+              <div class="card-details">
+                <div class='card-title'>Isuava wakceajo fe.jpg</div>
+                <div class='card-date'>Wed.Aug 27, 2025</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+             <img src="gal2.jpg" alt="" >
+              </div>
+              <div class="card-details">
+                <div class='card-title'>Ip docmowe vemremrif.jpg</div>
+                <div class='card-date'>Wed.Aug 27, 2025</div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-img">
+             <img src="gal3.jpg" alt="" >
+              </div>
+              <div class="card-details">
+                <div class='card-title'>Duan cosudos utaku.jpg</div>
+                <div class='card-date'>Wed.Aug 27, 2025</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
